@@ -15,22 +15,21 @@ function StarRating({ rating }) {
       If the rating is 4, we need 4 copies.
     */
   
-    const starRatingArray = Array.from({ length: rating });
+    const starRatings = Array.from({ length: rating });
 
     return (
-    <>
-        <div className="star-wrapper">
-        {/*Iterate through the array  */}
-        {starRatingArray.map((star, index) => (
-            <img
-            key={index}
-            alt="Rating-Star"
-            className="gold-star"
-            src="https://sandpack-bundler.vercel.app/img/gold-star.svg"
-            />
-        ))}
-        </div>
-    </>
+        <>
+            <div className="star-wrapper">
+                {starRatings.map((index) => (
+                    <img
+                    key={index}
+                    alt="Star-Ratings"
+                    className="gold-star"
+                    src="https://sandpack-bundler.vercel.app/img/gold-star.svg"
+                    />
+                ))}
+            </div>
+        </>
     );
   }
   
